@@ -32,42 +32,42 @@
     }
 })();
 //======================================Admin View==============================================
-(function() {
-    'use strict'
+// (function() {
+//     'use strict'
 
-    angular
-        .module('client.site').config(RouteConfig)
+//     angular
+//         .module('client.site').config(RouteConfig)
 
-    RouteConfig.$inject = ['$stateProvider']
+//     RouteConfig.$inject = ['$stateProvider']
 
-    function RouteConfig($stateProvider) {
-        $stateProvider
-            .state('site.admin', {
-                url: '/admin',
-                views: {
-                    'admin': {
-                        templateUrl: 'client/site/admin-home/admin-home.html',
-                        controller: 'adminController as ac'
-                    }
-                },
-                resolve: {
-                    messages: getMessages,
-                    blogPosts: getBlogPosts
-                }
-            })
-    }
+//     function RouteConfig($stateProvider) {
+//         $stateProvider
+//             .state('site.admin', {
+//                 url: '/admin',
+//                 views: {
+//                     'admin': {
+//                         templateUrl: 'client/site/admin-home/admin-home.html',
+//                         controller: 'adminController as ac'
+//                     }
+//                 },
+//                 resolve: {
+//                     messages: getMessages,
+//                     blogPosts: getBlogPosts
+//                 }
+//             })
+//     }
 
-    getMessages.$inject = ['messageService']
-    getBlogPosts.$inject = ['blogPostService']
+//     getMessages.$inject = ['messageService']
+//     getBlogPosts.$inject = ['blogPostService']
 
-    function getMessages(messageService) {
-        return messageService.readAll()
-            .then(data => data.items)
-    }
+//     function getMessages(messageService) {
+//         return messageService.readAll()
+//             .then(data => data.items)
+//     }
 
-    function getBlogPosts(blogPostService) {
-        return blogPostService.readAll()
-            .then(data => data.items)
-    }
+//     function getBlogPosts(blogPostService) {
+//         return blogPostService.readAll()
+//             .then(data => data.items)
+//     }
 
-})();
+// })();
