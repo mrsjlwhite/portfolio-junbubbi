@@ -18,7 +18,6 @@
 
         //views /controllers
         'client.crud',
-        'client.hackers',
         'client.site'
     ])
 
@@ -38,6 +37,7 @@
         '$locationProvider'
     ];
 
+    //SETUP 404
     function RouteConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/hackers/list');
         $locationProvider.html5Mode(true);

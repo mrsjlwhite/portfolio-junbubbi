@@ -1,5 +1,4 @@
 const router = require('express').Router()
-const hackersRoutes = require('./hackers.routes')
 const clientRoutes = require('./client.routes')
 const messagesRoutes = require('./messages.routes')
 const articlesRoutes = require('./blog-articles.routes')
@@ -13,7 +12,6 @@ module.exports = router
 router.use(authenticate)
 
 // API routes (group routing modules here - no empty lines between)
-router.use('/api/hackers', hackersRoutes)
 router.use('/api/myMessages', messagesRoutes)
 router.use('/api/myBlogPosts', articlesRoutes)
 router.use('/api/blogCategories', categoriesRoutes)
