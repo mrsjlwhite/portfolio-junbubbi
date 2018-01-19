@@ -15,7 +15,6 @@ router.use(authenticate)
 router.use('/api/myMessages', messagesRoutes)
 router.use('/api/myBlogPosts', articlesRoutes)
 router.use('/api/blogCategories', categoriesRoutes)
-// router.use('/api/entities', entitiesRoutes)
 
 
 // API error handlers (API routes must be registered before this)
