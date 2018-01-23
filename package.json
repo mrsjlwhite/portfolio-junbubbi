@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.4.3",
+    "body-parser": "^1.18.2",
     "bower": "^1.8.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
@@ -23,6 +23,7 @@
     "joi-objectid": "^2.0.0",
     "mongodb": "^2.2.31",
     "node-uuid": "^1.4.7",
+    "nodemailer": "^4.4.2",
     "ui-router": "^1.0.0-alpha.3"
   },
   "devDependencies": {

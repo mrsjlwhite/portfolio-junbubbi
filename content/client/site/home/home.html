@@ -416,27 +416,31 @@
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
                     <!-- <form id="ajax-contact" class="" method="post" action="mailer.php" name="hc.form"> -->
-                    <form id="ajax-contact" class="" name="hc.form">
+                    <form id="ajax-contact" ng-submit="hc.sendMail()" name="hc.form">
                         <fieldset>
                             <div class="row">
+                                <!--Name-->
                                 <div class="input col-xs-12 col-sm-12 padding-bottom-xs-50 padding-bottom-40">
                                     <label class="input-label" for="name">
                                         <span class="input-label-content font-second">name *</span>
                                     </label>
                                     <input class="input-field" type="text" name="name" id="name" ng-model="hc.formData.name" required />
                                 </div>
+                                <!--Email-->
                                 <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-50">
                                     <label class="input-label" for="email">
                                         <span class="input-label-content font-second" data-content="email">email *</span>
                                     </label>
                                     <input class="input-field" type="email" name="email" id="email" ng-model="hc.formData.email" required />
                                 </div>
+                                <!--Company-->
                                 <div class="input col-xs-12 col-sm-6 padding-bottom-xs-60 padding-bottom-50">
                                     <label class="input-label" for="company">
                                         <span class="input-label-content font-second" data-content="company">company</span>
                                     </label>
                                     <input class="input-field" type="text" name="company" id="company" ng-model="hc.formData.company" />
                                 </div>
+                                <!--Message-->
                                 <div class="message col-xs-12 col-sm-12 padding-bottom-xs-40 padding-bottom-30">
                                     <label class="textarea-label font-second" for="message">message *</label>
                                     <textarea class="input-field textarea" name="message" id="message" ng-model="hc.formData.message" required></textarea>
