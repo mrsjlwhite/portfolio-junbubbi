@@ -54,3 +54,13 @@ typings/
 
 # build folders
 **/build/**
+
+# all else
+/theme
+/_common
+/authentication
+/constants
+/crud
+/filters
+bootstrap.js
+module.js
