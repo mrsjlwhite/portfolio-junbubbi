@@ -56,12 +56,12 @@ typings/
 **/build/**
 
 # all else
-/theme
-/_common
-/authentication
-/constants
-/crud
-/filters
+theme
+_common
+authentication
+constants
+crud
+filters
 bootstrap.js
 module.js
-/app/filters
+app/filters
