@@ -33,6 +33,13 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+bower.json
+jsconfig.json
+nodemon.json
+package-lock.json
+package.json
+share-branch.sh
+typings.json
 
 # Optional npm cache directory
 .npm
@@ -41,7 +48,7 @@ jspm_packages
 .node_repl_history
 
 # Bower
-**/libs
+*/libs
 
 # Environment
 .env
@@ -51,10 +58,9 @@ jspm_packages
 
 # Misc
 typings/
+*/theme
+*/filters
 
 # build folders
 **/build/**
 
-# Other files
-content/theme
-app/filters

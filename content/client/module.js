@@ -37,9 +37,8 @@
         '$locationProvider'
     ];
 
-    //SETUP 404
     function RouteConfig($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/hackers/list');
+        $urlRouterProvider.otherwise('/lost');
         $locationProvider.html5Mode(true);
     }
 })();

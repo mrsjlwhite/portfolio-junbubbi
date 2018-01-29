@@ -1,6 +1,6 @@
 #!/bin/bash +x
 
-# This is a Sabio script to create a branch in your local Git repository and then automatically push it to the server.
+# This is a script to create a branch in your local Git repository and then automatically push it to the server.
 # The working directory will stay dirty.
 
 user_name=$(git config user.name)
