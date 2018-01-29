@@ -54,7 +54,14 @@ share-branch.sh
 # Misc
 typings/
 */theme
-*/filters
+**/_common
+**/authentication
+**/constants
+**/filters
+*.congif
+gulpfile.js
+.bowerrc
+.jsbeautifyrc
 
 # build folders
 **/build/**
