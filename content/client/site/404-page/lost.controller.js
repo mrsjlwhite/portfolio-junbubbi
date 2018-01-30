@@ -6,13 +6,14 @@
 
     LostController.$inject = ['$log']
 
-    function LostController($log)
-    let vm = this
+    function LostController($log) {
+        let vm = this
 
-    init()
+        init()
 
-    function init() {
-        $log.log("You've reached the 404 lost page.")
+        function init() {
+            $log.log("You've reached the 404 lost page.")
+        }
     }
 
 })();

@@ -4,7 +4,6 @@ const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const mongo = require('./app/mongodb')
 const router = require('./app/routes')
-//const nodeMailer = require('nodemailer')
 
 // initialize dotenv
 dotenv.config()
@@ -31,32 +30,3 @@ mongo.connect(process.env.MONGODB_URL)
         console.error(err)
         process.exit(1)
     })
-
-// NodeMailer config settings    
-// let transporter = nodemailer.createTransport({
-//     service: 'gmail', 
-//     secure: false,
-//     port: 25,
-//     auth: {
-//         user: 'jeslynleon@gmail.com',
-//         pass: config.password
-//     },
-//     tls: {
-//         rejectUnauthorized: false
-//     }
-// })
-
-// let HelperOptions = {
-//     form: '"Jeslyn Leon" <jeslynleon@gmail.com',
-//     to: 'jeslynleon@gmail.com',
-//     subject: 'Did you see it?',
-//     text: 'Hell yea you did!'
-// }
-
-// transporter.sendMail(HelperOptions, (error, info) => {
-//     if(error) {
-//         console.log(error)
-//     } else {
-//         console.log(`The message was sent successfully! ${info}`)
-//     }
-// })
