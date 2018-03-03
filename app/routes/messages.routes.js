@@ -11,9 +11,12 @@ router.get('/', messagesController.readAll)
 
 router.get('/:id([0-9a-fA-F]{24})', messagesController.readById)
 
-router.post('/', validateBody(Message), messagesController.create)
+// router.post('/', validateBody(Message), messagesController.create)
+// router.put('/:id([0-9a-fA-F]{24})', validateBody(Message), messagesController.update)
 
-router.put('/:id([0-9a-fA-F]{24})', validateBody(Message), messagesController.update)
+router.post('/', Message, messagesController.create)
+
+router.put('/:id([0-9a-fA-F]{24})', Message, messagesController.update)
 
 router.delete('/:id([0-9a-fA-F]{24})', messagesController.delete)
 
