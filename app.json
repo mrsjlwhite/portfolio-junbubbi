@@ -1,0 +1,11 @@
+{
+    "name": "Portfolio - JunBubbi",
+    "description": "My web developer portfolio.",
+    "website": "http://jeslynleon.com/",
+    "buildpacks":[
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "repository": "https://github.com/JunBubbi/portfolio-junbubbi"
+}

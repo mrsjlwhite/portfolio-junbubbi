@@ -7,8 +7,7 @@
     "name": "JeslynLeon"
   },
   "scripts": {
-    "heroku-postbuild": "gulp prod",
-    "postinstall": "bower install"
+    "postinstall": "bower install && gulp vendor"
   },
   "cacheDirectories": [
     "content/libs"
@@ -55,8 +54,5 @@
   "engines": {
     "node": "8.9.3",
     "npm": "5.7.1"
-  },
-  "scripts": {
-    "postinstall": "bower install && gulp build"
   }
 }
