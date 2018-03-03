@@ -7,7 +7,7 @@
     "name": "JeslynLeon"
   },
   "scripts": {
-    "postinstall": "bower install && gulp vendor"
+    "postinstall": "bower install && gulp"
   },
   "cacheDirectories": [
     "content/libs"
