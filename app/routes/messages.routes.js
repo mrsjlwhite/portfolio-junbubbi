@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const messagesController = require('../controllers/messages.controller')
-const validateBody = require('../filters/validate.body')
+//const validateBody = require('../filters/validate.body')
 const Message = require('../models/message')
 
 module.exports = router
