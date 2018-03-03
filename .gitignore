@@ -52,7 +52,9 @@ share-branch.sh
 
 # Misc
 typings/
-*/theme
+*/theme/fonts
+*/theme/img
+*/theme/*.png
 **/_common
 **/authentication
 **/constants
