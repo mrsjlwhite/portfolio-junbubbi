@@ -64,7 +64,4 @@ gulpfile.js
 .bowerrc
 .jsbeautifyrc
 
-# build folders
-**/build/**
-
 "node_modules" 

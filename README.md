@@ -1,11 +1,11 @@
-# JunBubbi's Portfolio
-The portfolio for Jeslyn Leon, full stack web developer.
+# My Portfolio
+Hi there! My name is Jeslyn, aspiring full stack developer, and this is the source code for my portfolio. 
 
 ## Technologies Used
 * AngularJS
 * NodeJS
 * ExpressJS
-* MongoDB
+* Heroku
 
-### To note - extra backend work
-I had previously planned to implement a blogging system to this portfolio, but realized Mediumd would be the best platform for me. But I've left the backend code to leave as sample work, where I implemented aggregation between two blog collections so that less server calls would be made. 
+## Thanks for stopping by!
+_www.jeslynleon.com_
