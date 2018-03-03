@@ -65,3 +65,4 @@ gulpfile.js
 # build folders
 **/build/**
 
+"node_modules" 

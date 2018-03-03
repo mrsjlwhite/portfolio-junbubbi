@@ -7,7 +7,7 @@
     "name": "JeslynLeon"
   },
   "scripts": {
-    "postinstall": "bower install && gulp"
+    "postinstall": "bower install && gulp prod"
   },
   "cacheDirectories": [
     "content/libs"
@@ -20,7 +20,7 @@
     "cookie-parser": "^1.4.3",
     "devicon": "^2.0.0",
     "dotenv": "^2.0.0",
-    "express": "^4.16.2",
+    "express": "4.16.2",
     "express-validator": "^3.1.2",
     "joi": "^11.1.1",
     "joi-objectid": "^2.0.0",
