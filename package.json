@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "cacheDirectories": [
     "content/libs"
