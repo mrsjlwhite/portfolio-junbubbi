@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(router)
 
 // start mongo connection pool, then start express app
-mongo.connect(process.env.MONGODB_URL)
+mongo.connect(port)
     .then(() => app.listen(port))
     .then(() => console.log(`Connected to port ${port}`))
     .catch((err) => {
