@@ -4,12 +4,7 @@ const messagesRoutes = require('./messages.routes')
 const articlesRoutes = require('./blog-articles.routes')
 const categoriesRoutes = require('./blog-categories.routes')
 
-const authenticate = require('../filters/authenticate')
-
 module.exports = router
-
-// check authentication for all requests
-router.use(authenticate)
 
 // API routes (group routing modules here - no empty lines between)
 router.use('/api/myMessages', messagesRoutes)
