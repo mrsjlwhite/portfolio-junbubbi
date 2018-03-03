@@ -10,9 +10,9 @@ router.get('/', messagesController.readAll)
 
 router.get('/:id([0-9a-fA-F]{24})', messagesController.readById)
 
-router.post('/', Message, messagesController.create)
+router.post('/', messagesController.create)
 
-router.put('/:id([0-9a-fA-F]{24})', Message, messagesController.update)
+router.put('/:id([0-9a-fA-F]{24})', messagesController.update)
 
 router.delete('/:id([0-9a-fA-F]{24})', messagesController.delete)
 
