@@ -150,9 +150,6 @@
                     templateUrl: 'client/site/home/home.html',
                     controller: 'homeController as hc'
                 }
-            },
-            resolve: {
-                blogPosts: getBlogPosts
             }
         }).state('site.lost', {
             url: '/lost',
@@ -162,14 +159,6 @@
                     controller: 'lostController as lc'
                 }
             }
-        });
-    }
-
-    getBlogPosts.$inject = ['blogPostService'];
-
-    function getBlogPosts(blogPostService) {
-        return blogPostService.readAll().then(function (data) {
-            return data.items;
         });
     }
 })();
