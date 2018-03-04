@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const dotenv = require('dotenv')
+const dotenv = require('dotenv').config({silent: true})
 const bodyParser = require('body-parser')
 const mongo = require('./app/mongodb')
 const router = require('./app/routes')
