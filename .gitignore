@@ -44,9 +44,6 @@ share-branch.sh
 # Bower
 */libs
 
-# Environment
-.env
-
 # VSCode
 .vscode/*
 
