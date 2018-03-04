@@ -1,15 +1,15 @@
 const router = require('express').Router()
 const clientRoutes = require('./client.routes')
-const messagesRoutes = require('./messages.routes')
-const articlesRoutes = require('./blog-articles.routes')
-const categoriesRoutes = require('./blog-categories.routes')
+// const messagesRoutes = require('./messages.routes')
+// const articlesRoutes = require('./blog-articles.routes')
+// const categoriesRoutes = require('./blog-categories.routes')
 
 module.exports = router
 
 // API routes (group routing modules here - no empty lines between)
-router.use('/api/myMessages', messagesRoutes)
-router.use('/api/myBlogPosts', articlesRoutes)
-router.use('/api/blogCategories', categoriesRoutes)
+// router.use('/api/myMessages', messagesRoutes)
+// router.use('/api/myBlogPosts', articlesRoutes)
+// router.use('/api/blogCategories', categoriesRoutes)
 
 
 // API error handlers (API routes must be registered before this)
