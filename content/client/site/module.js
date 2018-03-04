@@ -17,9 +17,6 @@
                         templateUrl: 'client/site/home/home.html',
                         controller: 'homeController as hc'
                     }
-                },
-                resolve: {
-                    blogPosts: getBlogPosts
                 }
             })
             .state('site.lost', {
@@ -31,12 +28,5 @@
                     }
                 }
             })
-    }
-
-    getBlogPosts.$inject = ['blogPostService']
-
-    function getBlogPosts(blogPostService) {
-        return blogPostService.readAll()
-            .then(data => data.items)
     }
 })();
