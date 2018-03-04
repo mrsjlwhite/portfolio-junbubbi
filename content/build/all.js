@@ -144,7 +144,7 @@
 
     function RouteConfig($stateProvider) {
         $stateProvider.state('site.home', {
-            url: '/home',
+            url: '/',
             views: {
                 'content': {
                     templateUrl: 'client/site/home/home.html',
