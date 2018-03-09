@@ -5,10 +5,18 @@
         "promise"
     ],
     "rules": {
-        "indent": [2, 4, {
-            "SwitchCase": 1
-        }],
-        "space-before-function-paren": ["warn", "never"]
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "space-before-function-paren": [
+            "off"
+        ],
+        "no-trailing-spaces": [
+            "off"
+        ]
     }
-
 }

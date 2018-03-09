@@ -2,21 +2,22 @@
 /* https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#application-structure */
 
 (function () {
-    'use strict';
+    'use strict'
+    
     angular.module('client', [
         // 3rd party
         'ui.router',
         'ui.bootstrap',
 
-        //base / common
+        // base / common
         'client.layout',
         'client._common',
 
-        //services
+        // services
         'client.authentication',
         'client.services',
 
-        //views /controllers
+        // views /controllers
         'client.crud',
         'client.site'
     ])
@@ -35,10 +36,10 @@
         '$stateProvider',
         '$urlRouterProvider',
         '$locationProvider'
-    ];
+    ]
 
     function RouteConfig($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/lost');
-        $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/lost')
+        $locationProvider.html5Mode(true)
     }
-})();
+})()
