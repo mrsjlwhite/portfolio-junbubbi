@@ -10,13 +10,13 @@
     // 3rd party
     'ui.router', 'ui.bootstrap',
 
-    //base / common
+    // base / common
     'client.layout', 'client._common',
 
-    //services
+    // services
     'client.authentication', 'client.services',
 
-    //views /controllers
+    // views /controllers
     'client.crud', 'client.site']);
 
     angular.module('client').config(RouteConfig).run(StateErrorHandler);
@@ -471,37 +471,15 @@ $(function () {
 
     angular.module('client.site').controller('homeController', HomeController);
 
-    HomeController.$inject = ['messageService', 'blogPosts', '$http', '$log'];
+    HomeController.$inject = ['$http', '$log'];
 
-    function HomeController(messageService, blogPosts, $http, $log) {
+    function HomeController($http, $log) {
         var vm = this;
-
-        // from previous blog implementation
-        vm.blogPosts = null;
-        vm.leftPost = null;
-        vm.rightPost = null;
-
-        // from previous form
-        vm.formData = null;
-        vm.submitMessage = _submitMessage;
 
         init();
 
         function init() {
             $log.log('hola - you be home');
-
-            // displaying blog posts
-            vm.blogPosts = blogPosts;
-            vm.leftPost = vm.blogPosts[0];
-            vm.rightPost = vm.blogPosts[1];
-        }
-
-        function _submitMessage() {
-            messageService.create(vm.formData).then(function (data) {
-                return $log.log(data);
-            }).catch(function (err) {
-                return $log.log(err);
-            });
         }
     }
 })();
