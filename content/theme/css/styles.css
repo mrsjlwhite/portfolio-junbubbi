@@ -38,6 +38,15 @@
   width: 200px;
   opacity: 0.5;
 }
+
+#whiteBackground {
+  background: #ffffff;
+  /* background: pink; */
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
 /*
   ========================================
   Genaral styles

@@ -1,4 +1,4 @@
-//======================================Home Page==============================================
+// ======================================Home Page==============================================
 (function() {
     'use strict'
 
@@ -19,6 +19,15 @@
                     }
                 }
             })
+            .state('site.project-laso', {
+                url: '/project-laso-concepts',
+                views: {
+                    'content': {
+                        templateUrl: 'client/site/project-laso/project-laso.html',
+                        controller: 'projLasoController as lc'
+                    }
+                }
+            })
             .state('site.lost', {
                 url: '/lost',
                 views: {
@@ -29,4 +38,4 @@
                 }
             })
     }
-})();
+})()

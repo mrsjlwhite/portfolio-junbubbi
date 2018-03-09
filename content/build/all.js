@@ -132,7 +132,7 @@
 })();
 'use strict';
 
-//======================================Home Page==============================================
+// ======================================Home Page==============================================
 (function () {
     'use strict';
 
@@ -149,6 +149,14 @@
                 'content': {
                     templateUrl: 'client/site/home/home.html',
                     controller: 'homeController as hc'
+                }
+            }
+        }).state('site.project-laso', {
+            url: '/project-laso-concepts',
+            views: {
+                'content': {
+                    templateUrl: 'client/site/project-laso/project-laso.html',
+                    controller: 'projLasoController as lc'
                 }
             }
         }).state('site.lost', {
@@ -480,6 +488,25 @@ $(function () {
 
         function init() {
             $log.log('hola - you be home');
+        }
+    }
+})();
+'use strict';
+
+(function () {
+    'use strict';
+
+    angular.module('client.site').controller('projLasoController', ProjLasoController);
+
+    LostController.$inject = ['$log'];
+
+    function LostController($log) {
+        var vm = this;
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project laso page.");
         }
     }
 })();
