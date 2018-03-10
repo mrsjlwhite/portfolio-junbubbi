@@ -145,7 +145,7 @@
 
     function RouteConfig($stateProvider) {
         $stateProvider.state('site.home', {
-            url: '/home',
+            url: '/',
             views: {
                 'content': {
                     templateUrl: 'client/site/home/home.html',
@@ -426,6 +426,25 @@ $(function () {
 })();
 'use strict';
 
+(function () {
+    'use strict';
+
+    angular.module('client.crud').controller('projIsraelController', ProjIsraelController);
+
+    ProjIsraelController.$inject = ['$log'];
+
+    function ProjIsraelController($log) {
+        // let vm = this
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project viajemos a israel page.");
+        }
+    }
+})();
+'use strict';
+
 /* global angular */
 
 (function () {
@@ -464,20 +483,41 @@ $(function () {
 })();
 'use strict';
 
+/* global angular */
 (function () {
     'use strict';
 
-    angular.module('client.crud').controller('projIsraelController', ProjIsraelController);
+    angular.module('client.site').controller('homeController', HomeController);
 
-    ProjIsraelController.$inject = ['$log'];
+    HomeController.$inject = ['$http', '$log'];
 
-    function ProjIsraelController($log) {
+    function HomeController($http, $log) {
+        var vm = this;
+
+        init();
+
+        function init() {
+            $log.log('hola - you be home');
+        }
+    }
+})();
+'use strict';
+
+/* global angular */
+(function () {
+    'use strict';
+
+    angular.module('client.site').controller('projLasoController', ProjLasoController);
+
+    ProjLasoController.$inject = ['$log'];
+
+    function ProjLasoController($log) {
         // let vm = this
 
         init();
 
         function init() {
-            $log.log("You've reached the project viajemos a israel page.");
+            $log.log("You've reached the project laso page.");
         }
     }
 })();
@@ -506,26 +546,6 @@ $(function () {
 (function () {
     'use strict';
 
-    angular.module('client.site').controller('homeController', HomeController);
-
-    HomeController.$inject = ['$http', '$log'];
-
-    function HomeController($http, $log) {
-        var vm = this;
-
-        init();
-
-        function init() {
-            $log.log('hola - you be home');
-        }
-    }
-})();
-'use strict';
-
-/* global angular */
-(function () {
-    'use strict';
-
     angular.module('client.site').controller('projIsraelController', ProjIsraelController);
 
     ProjIsraelController.$inject = ['$log'];
@@ -537,26 +557,6 @@ $(function () {
 
         function init() {
             $log.log("You've reached the project viajemos a israel page.");
-        }
-    }
-})();
-'use strict';
-
-/* global angular */
-(function () {
-    'use strict';
-
-    angular.module('client.site').controller('projLasoController', ProjLasoController);
-
-    ProjLasoController.$inject = ['$log'];
-
-    function ProjLasoController($log) {
-        // let vm = this
-
-        init();
-
-        function init() {
-            $log.log("You've reached the project laso page.");
         }
     }
 })();
