@@ -1,5 +1,6 @@
+/* global angular */
 // ======================================Home Page==============================================
-(function() {
+(function () {
     'use strict'
 
     angular.module('client.site', ['ui.router'])
@@ -11,7 +12,7 @@
     function RouteConfig($stateProvider) {
         $stateProvider
             .state('site.home', {
-                url: '/',
+                url: '/home',
                 views: {
                     'content': {
                         templateUrl: 'client/site/home/home.html',
@@ -28,6 +29,15 @@
                     }
                 }
             })
+            .state('site.project-israel', {
+                url: '/project-viajemos-a-israel',
+                views: {
+                    'content': {
+                        templateUrl: 'client/site/project-israel/project-israel.html',
+                        controller: 'projIsraelController as ic'
+                    }
+                }
+            })
             .state('site.lost', {
                 url: '/lost',
                 views: {
@@ -38,4 +48,4 @@
                 }
             })
     }
-})()
+})();

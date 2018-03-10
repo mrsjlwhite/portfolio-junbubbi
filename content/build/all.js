@@ -132,6 +132,7 @@
 })();
 'use strict';
 
+/* global angular */
 // ======================================Home Page==============================================
 (function () {
     'use strict';
@@ -144,7 +145,7 @@
 
     function RouteConfig($stateProvider) {
         $stateProvider.state('site.home', {
-            url: '/',
+            url: '/home',
             views: {
                 'content': {
                     templateUrl: 'client/site/home/home.html',
@@ -157,6 +158,14 @@
                 'content': {
                     templateUrl: 'client/site/project-laso/project-laso.html',
                     controller: 'projLasoController as lc'
+                }
+            }
+        }).state('site.project-israel', {
+            url: '/project-viajemos-a-israel',
+            views: {
+                'content': {
+                    templateUrl: 'client/site/project-israel/project-israel.html',
+                    controller: 'projIsraelController as ic'
                 }
             }
         }).state('site.lost', {
@@ -458,6 +467,25 @@ $(function () {
 (function () {
     'use strict';
 
+    angular.module('client.crud').controller('projIsraelController', ProjIsraelController);
+
+    ProjIsraelController.$inject = ['$log'];
+
+    function ProjIsraelController($log) {
+        // let vm = this
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project viajemos a israel page.");
+        }
+    }
+})();
+'use strict';
+
+(function () {
+    'use strict';
+
     angular.module('client.site').controller('lostController', LostController);
 
     LostController.$inject = ['$log'];
@@ -474,6 +502,7 @@ $(function () {
 })();
 'use strict';
 
+/* global angular */
 (function () {
     'use strict';
 
@@ -493,15 +522,36 @@ $(function () {
 })();
 'use strict';
 
+/* global angular */
+(function () {
+    'use strict';
+
+    angular.module('client.site').controller('projIsraelController', ProjIsraelController);
+
+    ProjIsraelController.$inject = ['$log'];
+
+    function ProjIsraelController($log) {
+        // let vm = this
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project viajemos a israel page.");
+        }
+    }
+})();
+'use strict';
+
+/* global angular */
 (function () {
     'use strict';
 
     angular.module('client.site').controller('projLasoController', ProjLasoController);
 
-    LostController.$inject = ['$log'];
+    ProjLasoController.$inject = ['$log'];
 
-    function LostController($log) {
-        var vm = this;
+    function ProjLasoController($log) {
+        // let vm = this
 
         init();
 

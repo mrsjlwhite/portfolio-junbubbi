@@ -42,4 +42,4 @@
         $urlRouterProvider.otherwise('/lost')
         $locationProvider.html5Mode(true)
     }
-})()
+})();

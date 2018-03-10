@@ -1,13 +1,14 @@
+/* global angular */
 (function () {
     'use strict'
 
     angular.module('client.site')
         .controller('projLasoController', ProjLasoController)
 
-    LostController.$inject = ['$log']
+    ProjLasoController.$inject = ['$log']
 
-    function LostController($log) {
-        let vm = this
+    function ProjLasoController($log) {
+        // let vm = this
 
         init()
 

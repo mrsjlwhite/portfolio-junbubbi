@@ -1,3 +1,4 @@
+/* global angular */
 (function () {
     'use strict'
 
@@ -15,4 +16,4 @@
             $log.log('hola - you be home')
         }
     }
-})();
+})()

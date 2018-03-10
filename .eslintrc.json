@@ -17,6 +17,9 @@
         ],
         "no-trailing-spaces": [
             "off"
+        ],
+        "no-extra-semi": [
+            "disable"
         ]
     }
 }
