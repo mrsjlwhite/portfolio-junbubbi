@@ -426,25 +426,6 @@ $(function () {
 })();
 'use strict';
 
-(function () {
-    'use strict';
-
-    angular.module('client.crud').controller('projIsraelController', ProjIsraelController);
-
-    ProjIsraelController.$inject = ['$log'];
-
-    function ProjIsraelController($log) {
-        // let vm = this
-
-        init();
-
-        function init() {
-            $log.log("You've reached the project viajemos a israel page.");
-        }
-    }
-})();
-'use strict';
-
 /* global angular */
 
 (function () {
@@ -483,6 +464,25 @@ $(function () {
 })();
 'use strict';
 
+(function () {
+    'use strict';
+
+    angular.module('client.crud').controller('projIsraelController', ProjIsraelController);
+
+    ProjIsraelController.$inject = ['$log'];
+
+    function ProjIsraelController($log) {
+        // let vm = this
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project viajemos a israel page.");
+        }
+    }
+})();
+'use strict';
+
 /* global angular */
 (function () {
     'use strict';
@@ -498,26 +498,6 @@ $(function () {
 
         function init() {
             $log.log('hola - you be home');
-        }
-    }
-})();
-'use strict';
-
-/* global angular */
-(function () {
-    'use strict';
-
-    angular.module('client.site').controller('projLasoController', ProjLasoController);
-
-    ProjLasoController.$inject = ['$log'];
-
-    function ProjLasoController($log) {
-        // let vm = this
-
-        init();
-
-        function init() {
-            $log.log("You've reached the project laso page.");
         }
     }
 })();
@@ -598,5 +578,25 @@ $(function () {
                 console.log('this is from the baseService');
             }
         };
+    }
+})();
+'use strict';
+
+/* global angular */
+(function () {
+    'use strict';
+
+    angular.module('client.site').controller('projLasoController', ProjLasoController);
+
+    ProjLasoController.$inject = ['$log'];
+
+    function ProjLasoController($log) {
+        // let vm = this
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project laso page.");
+        }
     }
 })();
