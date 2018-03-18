@@ -388,6 +388,44 @@ $(function () {
 'use strict';
 
 /* global angular */
+
+(function () {
+    'use strict';
+
+    angular.module('client.authentication').factory('authenticationService', AuthenticationServiceFactory);
+
+    AuthenticationServiceFactory.$inject = ['$http', '$q', 'baseService'];
+
+    function AuthenticationServiceFactory($http, $q, baseService) {
+        var authenticationService = Object.create(baseService);
+
+        authenticationService.register = _register;
+        authenticationService.signin = _signin;
+
+        return authenticationService;
+
+        function _register(userData) {
+            return $http.post('/api/users/register', userData).then(function (response) {
+                return response.data;
+            }).catch(function (err) {
+                console.log(err.data);
+                return $q.reject(err.data);
+            });
+        }
+
+        function signin(userData) {
+            return $http.post('/api/users/login', userData).then(function (response) {
+                return response.data;
+            }).catch(function (err) {
+                console.log(err.data);
+                return $q.reject(err.data);
+            });
+        }
+    }
+})();
+'use strict';
+
+/* global angular */
 (function () {
     'use strict';
 
@@ -426,58 +464,20 @@ $(function () {
 })();
 'use strict';
 
-/* global angular */
-
 (function () {
     'use strict';
 
-    angular.module('client.authentication').factory('authenticationService', AuthenticationServiceFactory);
+    angular.module('client.site').controller('lostController', LostController);
 
-    AuthenticationServiceFactory.$inject = ['$http', '$q', 'baseService'];
+    LostController.$inject = ['$log'];
 
-    function AuthenticationServiceFactory($http, $q, baseService) {
-        var authenticationService = Object.create(baseService);
-
-        authenticationService.register = _register;
-        authenticationService.signin = _signin;
-
-        return authenticationService;
-
-        function _register(userData) {
-            return $http.post('/api/users/register', userData).then(function (response) {
-                return response.data;
-            }).catch(function (err) {
-                console.log(err.data);
-                return $q.reject(err.data);
-            });
-        }
-
-        function signin(userData) {
-            return $http.post('/api/users/login', userData).then(function (response) {
-                return response.data;
-            }).catch(function (err) {
-                console.log(err.data);
-                return $q.reject(err.data);
-            });
-        }
-    }
-})();
-'use strict';
-
-(function () {
-    'use strict';
-
-    angular.module('client.crud').controller('projIsraelController', ProjIsraelController);
-
-    ProjIsraelController.$inject = ['$log'];
-
-    function ProjIsraelController($log) {
-        // let vm = this
+    function LostController($log) {
+        var vm = this;
 
         init();
 
         function init() {
-            $log.log("You've reached the project viajemos a israel page.");
+            $log.log("You've reached the 404 lost page.");
         }
     }
 })();
@@ -503,25 +503,6 @@ $(function () {
 })();
 'use strict';
 
-(function () {
-    'use strict';
-
-    angular.module('client.site').controller('lostController', LostController);
-
-    LostController.$inject = ['$log'];
-
-    function LostController($log) {
-        var vm = this;
-
-        init();
-
-        function init() {
-            $log.log("You've reached the 404 lost page.");
-        }
-    }
-})();
-'use strict';
-
 /* global angular */
 (function () {
     'use strict';
@@ -537,6 +518,26 @@ $(function () {
 
         function init() {
             $log.log("You've reached the project viajemos a israel page.");
+        }
+    }
+})();
+'use strict';
+
+/* global angular */
+(function () {
+    'use strict';
+
+    angular.module('client.site').controller('projLasoController', ProjLasoController);
+
+    ProjLasoController.$inject = ['$log'];
+
+    function ProjLasoController($log) {
+        // let vm = this
+
+        init();
+
+        function init() {
+            $log.log("You've reached the project laso page.");
         }
     }
 })();
@@ -578,25 +579,5 @@ $(function () {
                 console.log('this is from the baseService');
             }
         };
-    }
-})();
-'use strict';
-
-/* global angular */
-(function () {
-    'use strict';
-
-    angular.module('client.site').controller('projLasoController', ProjLasoController);
-
-    ProjLasoController.$inject = ['$log'];
-
-    function ProjLasoController($log) {
-        // let vm = this
-
-        init();
-
-        function init() {
-            $log.log("You've reached the project laso page.");
-        }
     }
 })();
