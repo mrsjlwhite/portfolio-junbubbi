@@ -43,6 +43,7 @@ share-branch.sh
 
 # Bower
 */libs
+"bower_components"
 
 # VSCode
 .vscode/*
