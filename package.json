@@ -9,7 +9,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages node server.js",
+    "deploy": "gh-pages build node server.js",
     "postinstall": "bower install",
     "start": "node server.js"
   },
