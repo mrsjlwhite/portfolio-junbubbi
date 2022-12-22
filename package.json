@@ -32,6 +32,7 @@
     "joi-objectid": "^2.0.0",
     "mongodb": "^3.6.10",
     "node-uuid": "^1.4.7",
+    "nvm": "^0.0.4",
     "ui-router": "^1.0.0-alpha.3"
   },
   "devDependencies": {
